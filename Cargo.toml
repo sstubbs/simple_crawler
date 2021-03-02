@@ -1,0 +1,20 @@
+[package]
+name = "simple_crawler"
+version = "0.1.0"
+authors = ["Stephen Stubbs <stubbsstephen@gmail.com>"]
+edition = "2018"
+
+[features]
+default = []
+blocking = ["reqwest/blocking"]
+
+[dependencies]
+reqwest = { version = "0.11.1" }
+anyhow = "1.0.38"
+select = "0.5.0"
+futures = "0.3.13"
+tokio = { version = "1.2.0", features = ["full"] }
+
+[dev-dependencies]
+simple_crawler = { path = ".", features = ["blocking"] }
+wiremock = "0.5.1"
