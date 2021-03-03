@@ -17,3 +17,5 @@ A very simple crawler library
 - This runs in memory for performance reasons. Seeing as it's built in rust memory usage is minimal but if using it
   on a site with 1000 or more urls stack overflow can occur if not run in release mode. Another option is to increase
   stack limit.
+- A blocking option has been added which is enabled with the blocking feature. This will be removed over time as the 
+  async, concurrent and parallel options perform much better.
